@@ -1,5 +1,5 @@
 //====== VARIABLES ======
-$primary-color: #003366;
+$primary-color: #004466;
 $secondary-color: #CA486d;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
@@ -29,6 +29,16 @@ $background-opacity: 0.75;
         }
     }
 }
+
+//Set Text Color
+@function set-text-color($color) {
+    @if (lightness($color) > 40 ) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
 
 //media query mixins
 
